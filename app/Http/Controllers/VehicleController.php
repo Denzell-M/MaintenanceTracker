@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
+// use Illuminate\Contracts\View\View;
 
 class VehicleController extends Controller
 {
@@ -12,7 +13,9 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        //
+        return view("vehicles.index", [
+            "vehicles" => Vehicle::all(),
+        ]);
     }
 
     /**

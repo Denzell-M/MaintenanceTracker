@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->timestamps();
         });
 
-        Schema::create("maintenance-records", function (Blueprint $table) {
+        Schema::create("maintenance_records", function (Blueprint $table) {
             $table->id();
             $table->foreignId("vehicle_id")->constrained("vehicle");
             $table->string("description");
@@ -33,7 +33,7 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists("maintenance-records");
+        Schema::dropIfExists("maintenance_records");
         Schema::dropIfExists("vehicle");
     }
 };
