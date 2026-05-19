@@ -13,9 +13,9 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        return view("vehicles.index", [
-            "vehicles" => Vehicle::all(),
-        ]);
+        $vehicles = Vehicle::all();
+
+        return view("vehicles.index", [compact("vehicles")]);
     }
 
     /**
