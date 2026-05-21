@@ -10,7 +10,7 @@ class Vehicle extends Model
     /** @use HasFactory<\Database\Factories\VehicleFactory> */
     use HasFactory;
 
-    protected $table = "vehicle";
+    protected $table = "vehicles";
 
     protected $fillable = ["make", "model", "year"];
 }

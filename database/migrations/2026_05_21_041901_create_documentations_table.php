@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration {
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create("documentations", function (Blueprint $table) {
+            $table->id();
+            $table->foreignId("vehicle_id")->constrained("vehicles");
+            $table
+                ->foreignId("maintenance_record_id")
+                ->nullable()
+                ->constrained("maintenance_records");
+            $table->string("title")->nullable();
+            $table->string("file_url");
+            $table->string("file_name")->nullable();
+            $table->string("mime_type")->nullable();
+            $table->integer("file_size")->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists("documentations");
+    }
+};
