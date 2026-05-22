@@ -1,8 +1,8 @@
 <x-layout title="Index">
     <div class="mx-auto max-w-3xl p-6">
-        <div class="overflow-hidden rounded-lg border border-grey-200 bg-white shadown-sm">
-            <table class="min-w-full table-fixed divide-y divide-grey-200">
-                <thead class="bg-grey-50">
+        <div class="overflow-hidden rounded-lg border border-grey-200 bg-white shadow-sm">
+            <table class="min-w-full table-fixed divide-y divide-gray-200">
+                <thead class="bg-gray-100">
                     <tr class="divide-x divide-gray-200">
                         <th class="w-1/4 px-6 py-3 text-left text-sm font-semibold text-gray-700">Make</th>
                         <th class="w-1/4 px-6 py-3 text-left text-sm font-semibold text-gray-700">Model</th>
@@ -20,7 +20,7 @@
                         <td class="w-1/4 px-6 py-4 text-sm text-gray-700"> {{ $vehicle->odometer }}</td>
                         <td class="w-1/4 px-6 py-4 text-sm text-gray-700"> {{ $vehicle->year }}</td>
                         <td class="w-1/4 px-6 py-4 text-sm text-gray-700">
-                            <a href="{{ route('vehicle.show', $vehicle->id) }}"> View </a>
+                            <a href="{{ route('vehicles.show', $vehicle->id) }}"> View </a>
                         </td>
                     @empty
                     <tr>
