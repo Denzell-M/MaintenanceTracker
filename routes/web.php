@@ -7,3 +7,5 @@ Route::get("/", [VehicleController::class, "index"])->name("vehicles.index");
 Route::get("/vehicles/{vehicle}", [VehicleController::class, "show"])->name(
     "vehicles.show",
 );
+
+Route::resource("vehicles", VehicleController::class)->only("index", "show");
