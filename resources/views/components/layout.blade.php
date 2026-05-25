@@ -7,10 +7,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-	<title> {{ $title }} </title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+	<title>{{ $title }}</title>
 </head>
-<body class="w-[80%] mx-auto p-4">
-    {{ $slot }}
+<body class="min-h-screen bg-gray-50 text-gray-900">
+    <x-header />
+
+    <main class="w-[80%] mx-auto p-4">
+        {{ $slot }}
+    </main>
 </body>
 </html>

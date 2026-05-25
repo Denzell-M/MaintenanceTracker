@@ -4,11 +4,11 @@
             <table class="min-w-full table-fixed divide-y divide-gray-200">
                 <thead class="bg-gray-100">
                     <tr class="divide-x divide-gray-200">
-                        <th class="w-1/4 px-6 py-3 text-left text-sm font-semibold text-gray-700">Make</th>
-                        <th class="w-1/4 px-6 py-3 text-left text-sm font-semibold text-gray-700">Model</th>
-                        <th class="w-1/4 px-6 py-3 text-left text-sm font-semibold text-gray-700">Odometer</th>
-                        <th class="w-1/4 px-6 py-3 text-left text-sm font-semibold text-gray-700">Year</th>
-                        <th class="w-1/4 px-6 py-3 text-left text-sm font-semibold text-gray-700"> Details </th>
+                        <th class="table-header">Make</th>
+                        <th class="table-header">Model</th>
+                        <th class="table-header">Odometer</th>
+                        <th class="table-header">Year</th>
+                        <th class="table-header">Details</th>
                     </tr>
                 </thead>
 
